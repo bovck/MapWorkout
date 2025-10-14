@@ -1,0 +1,33 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(77, 75, 75);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+aside {
+  padding: 10px;
+  border-radius: 15px 0px 0px 15px;
+  width: 250px;
+  text-align: center;
+  background-image: radial-gradient(rgba(2, 5, 65, 0.885), rgb(2, 5, 65));
+}
+
+.divonica {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  background-color: aqua;
+}
+p {
+  text-align: left;
+  width: 100px;
+}
+
+p input {
+  width: 80px;
+}
+
+div label {
+  font-size: 0.8em;
+}

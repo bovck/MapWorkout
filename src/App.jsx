@@ -1,0 +1,15 @@
+import MapContextProvider from "./assets/store/context-map";
+import Aside from "./assets/Components/Aside";
+import Map from "./assets/Components/Map";
+function App() {
+  return (
+    <MapContextProvider>
+      <main className="mainWindow">
+        <Aside />
+        <Map />
+      </main>
+    </MapContextProvider>
+  );
+}
+
+export default App;

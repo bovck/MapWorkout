@@ -1,0 +1,14 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.mainWindow {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+.leaflet-container {
+  flex: 1;
+  height: 400px;
+}
