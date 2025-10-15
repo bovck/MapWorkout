@@ -4,7 +4,7 @@ import { MapContext } from "../store/context-map";
 import { useContext } from "react";
 
 export default function Map() {
-  const { position, LocationMarker } = useContext(MapContext);
+  const { position, LocationMarker, updatedData } = useContext(MapContext);
   return (
     <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
       <TileLayer
@@ -14,7 +14,7 @@ export default function Map() {
       <LocationMarker />
       {position.map((cord, i) => (
         <Marker key={i} position={cord.lating}>
-          <Popup>{cord.popUp}</Popup>
+          <Popup>{"oi"}</Popup>
         </Marker>
       ))}
     </MapContainer>

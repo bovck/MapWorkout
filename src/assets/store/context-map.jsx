@@ -20,25 +20,11 @@ export default function MapContextProvider({ children }) {
         setPosition((prev) => {
           updateData = {
             lating: e.latlng,
-            popUp: `Você está em lat: ${e.latlng.lat.toFixed(
-              2
-            )} e lng: ${e.latlng.lng.toFixed(2)}`,
             isClicked: true,
             id: Math.random(),
           };
 
-          return [
-            ...prev,
-            updateData,
-            // {
-            //   lating: e.latlng,
-            //   popUp: `Você está em lat: ${e.latlng.lat.toFixed(
-            //     2
-            //   )} e lng: ${e.latlng.lng.toFixed(2)}`,
-            //   isClicked: true,
-            //   id: Math.random(),
-            // },
-          ];
+          return [...prev, updateData];
         });
       },
     });
@@ -46,12 +32,11 @@ export default function MapContextProvider({ children }) {
 
   function handleInput(distancia, elevacao, ritmo, ganhos) {
     if (distancia === "" || elevacao === "" || ritmo === "" || ganhos === "") {
-      console.log("oi");
+      console.log("digite um número válido");
+      return;
     }
-
-    console.log("Ta dando bosta");
   }
-  // console.log(updateData);
+  console.log(position);
 
   const ctxValue = {
     position: position,
