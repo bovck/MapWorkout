@@ -1,33 +1,47 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(77, 75, 75);
-  padding: 0;
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   margin: 0;
-  box-sizing: border-box;
 }
-aside {
-  padding: 10px;
-  border-radius: 15px 0px 0px 15px;
-  width: 250px;
-  text-align: center;
-  background-image: radial-gradient(rgba(2, 5, 65, 0.885), rgb(2, 5, 65));
-}
-
 .divonica {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 10px auto;
-  background-color: aqua;
 }
-p {
-  text-align: left;
+
+.divonica p {
+  margin: auto;
   width: 100px;
 }
 
 p input {
   width: 80px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: none;
+  background-color: rgb(18, 29, 61);
+  border-bottom: 1px solid rgb(165, 163, 163);
+  color: white;
 }
 
+p input:focus {
+  /* box-shadow: 0 0 0 0; */
+  border: 0 none;
+  border-bottom: 1px solid rgb(40, 65, 138);
+  outline: 0;
+  transition: 0.3s ease-in-out;
+}
 div label {
   font-size: 0.8em;
+  color: rgb(165, 163, 163);
+}
+
+button {
+  background-color: rgb(18, 29, 61);
+  border: 1px solid white;
+  font-size: 0.7em;
+  padding: 4px;
+  color: white;
+  margin-left: 162px;
+  cursor: pointer;
 }
