@@ -26,11 +26,8 @@ h2 {
   color: rgb(165, 163, 163);
 }
 
-.teste {
-  display: flex;
-  justify-content: space-around;
-  height: 300px;
-  width: 300px;
-  background-color: brown;
-  margin: 20px auto;
+.descriptionContainer {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
 }
