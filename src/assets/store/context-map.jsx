@@ -12,6 +12,7 @@ let updateData = {};
 
 export default function MapContextProvider({ children }) {
   const [position, setPosition] = useState([]);
+  const [mapData, setMapData] = useState([]);
 
   function LocationMarker() {
     const map = useMapEvents({
@@ -21,7 +22,7 @@ export default function MapContextProvider({ children }) {
           updateData = {
             lating: e.latlng,
             isClicked: true,
-            id: Math.random(),
+            id: e.latlng.lat,
           };
 
           return [...prev, updateData];
@@ -35,6 +36,11 @@ export default function MapContextProvider({ children }) {
       console.log("digite um número válido");
       return;
     }
+
+    setMapData((prev) => {
+      const id = updateData.id;
+      return [...prev, { id, distancia, elevacao, ritmo, ganhos }];
+    });
   }
   console.log(position);
 
@@ -43,6 +49,7 @@ export default function MapContextProvider({ children }) {
     LocationMarker: LocationMarker,
     updatedData: updateData,
     handleInput,
+    mapData: mapData,
   };
   return <MapContext value={ctxValue}>{children}</MapContext>;
 }
