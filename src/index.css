@@ -12,22 +12,28 @@
   display: flex;
   width: 90%;
   margin: auto;
+  border: 1px solid #f2884b;
+  border-radius: 15px 0px 0px 15px;
 }
 
 aside {
   padding: 10px;
   border-radius: 15px 0px 0px 15px;
   width: 250px;
-  background-color: rgb(18, 29, 61);
+  background-color: #0d0d0d;
 }
 
 h2 {
   text-align: center;
-  color: rgb(165, 163, 163);
+  color: #f24822;
 }
 
 .descriptionContainer {
-  width: 100px;
+  width: 200px;
   height: 100px;
-  background-color: aqua;
+  margin: 20px auto 0px auto;
+  background-color: #57b7f2;
+  border-radius: 20px;
+  box-shadow: -1px -1px 9px rgba(0, 0, 0, 0.183);
+  /* border: 1px solid white; */
 }

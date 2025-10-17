@@ -1,24 +1,25 @@
 import { useRef } from "react";
 import styles from "../styles/Aside.module.css";
-export default function Inputs({ handleInput }) {
+export default function Inputs({ handleInput, handleCancel }) {
   const distancia = useRef();
   const ritmo = useRef();
   const elevacao = useRef();
-  const ganhos = useRef();
+  const tempo = useRef();
 
   function handleClick() {
     handleInput(
       distancia.current.value,
       elevacao.current.value,
       ritmo.current.value,
-      ganhos.current.value
+      tempo.current.value
     );
 
     distancia.current.value = "";
     elevacao.current.value = "";
     ritmo.current.value = "";
-    ganhos.current.value = "";
+    tempo.current.value = "";
   }
+
   return (
     <>
       <div className={styles.divonica}>
@@ -31,11 +32,16 @@ export default function Inputs({ handleInput }) {
         <p className={styles.end}>
           <label htmlFor="elevacao">Elevação</label>
           <input ref={elevacao} type="number" id="elevacao" />
-          <label htmlFor="ganhos">Ganhos</label>
-          <input ref={ganhos} type="number" id="ganhos" />
+          <label htmlFor="tempo">Tempo</label>
+          <input ref={tempo} type="number" id="tempo" />
         </p>
       </div>
-      <button onClick={handleClick}>enviar</button>
+      <div className={styles.containerBtn}>
+        <button onClick={handleCancel} id={styles.btnCancel}>
+          Cancelar
+        </button>
+        <button onClick={handleClick}>Enviar</button>
+      </div>
     </>
   );
 }
