@@ -21,6 +21,7 @@ aside {
   border-radius: 15px 0px 0px 15px;
   width: 250px;
   background-color: #0d0d0d;
+  flex-grow: 0;
 }
 
 h2 {
@@ -29,11 +30,37 @@ h2 {
 }
 
 .descriptionContainer {
-  width: 200px;
-  height: 100px;
-  margin: 20px auto 0px auto;
+  width: 170px;
+  height: 50px;
+  margin: 15px auto 0px auto;
   background-color: #57b7f2;
   border-radius: 20px;
   box-shadow: -1px -1px 9px rgba(0, 0, 0, 0.183);
   /* border: 1px solid white; */
+}
+.descriptionWorkout {
+  padding: 10px;
+  font-size: 0.7em;
+  color: white;
+}
+
+.teste {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
+}
+
+.btnNext {
+  border: none;
+}
+
+.btnPrev {
+  border: none;
+}
+
+.btnNext::after {
+  content: " >";
+}
+.btnPrev::before {
+  content: "< ";
 }

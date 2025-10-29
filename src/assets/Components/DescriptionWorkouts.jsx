@@ -1,11 +1,15 @@
 import { MapContext } from "../store/context-map";
 import { useContext } from "react";
+
 export default function DescriptionWorkouts({ itemMap }) {
   const { mapData } = useContext(MapContext);
-  console.log(mapData);
+  // console.log(mapData);
   return (
     <section className="descriptionContainer">
-      <p>{itemMap.distancia}</p>
+      <p className="descriptionWorkout">
+        Você correu {itemMap.distancia}km em {itemMap.tempo} min seu ritmo é de{" "}
+        {itemMap.ritmo} min/km
+      </p>
     </section>
   );
 }
