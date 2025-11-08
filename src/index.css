@@ -21,7 +21,8 @@ aside {
   border-radius: 15px 0px 0px 15px;
   width: 250px;
   background-color: #0d0d0d;
-  flex-grow: 0;
+  height: 400px;
+  overflow-y: auto;
 }
 
 h2 {
@@ -63,4 +64,14 @@ h2 {
 }
 .btnPrev::before {
   content: "< ";
+}
+
+::-webkit-scrollbar {
+  background-color: rgba(240, 255, 255, 0);
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f248226a;
+  border-radius: 50%;
 }
